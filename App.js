@@ -16,7 +16,7 @@ const App = () =>{
 
   const fetchDetails = async () =>{
     try {
-      const {data} = await Axios.get("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=3f72967c254c134f286ee21b0624b9b5&units=metric")
+      const {data} = await Axios.get("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid={YOUR API KEY}")
       const temp = data.main.temp
       setTemp(temp)
       const desc = data.weather[0].description
